@@ -1,0 +1,3 @@
+vhdl work "ff_d.vhd"
+vhdl work "paralelo_serie.vhd"
+vhdl work "sim_paralelo_serie.vhd"

@@ -1,9 +1,16 @@
-V3 10
+V3 13
 FL /home/ise/tutorias_DSD/FF_estructurados/ff_d.vhd 2024/12/19.04:20:51 P.20131013
 EN work/ff_d 1734582249 FL /home/ise/tutorias_DSD/FF_estructurados/ff_d.vhd \
       PB ieee/std_logic_1164 1381692176
 AR work/ff_d/Behavioral 1734582250 \
       FL /home/ise/tutorias_DSD/FF_estructurados/ff_d.vhd EN work/ff_d 1734582249
+FL /home/ise/tutorias_DSD/FF_estructurados/paralelo_serie.vhd 2024/12/19.05:01:57 P.20131013
+EN work/paralelo_serie 1734584550 \
+      FL /home/ise/tutorias_DSD/FF_estructurados/paralelo_serie.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/paralelo_serie/Behavioral 1734584551 \
+      FL /home/ise/tutorias_DSD/FF_estructurados/paralelo_serie.vhd \
+      EN work/paralelo_serie 1734584550 CP work/ff_d
 FL /home/ise/tutorias_DSD/FF_estructurados/serie_paralelo.vhd 2024/12/19.04:34:56 P.20131013
 EN work/serie_paralelo 1734582922 \
       FL /home/ise/tutorias_DSD/FF_estructurados/serie_paralelo.vhd \

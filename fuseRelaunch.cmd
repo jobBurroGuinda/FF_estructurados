@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "/home/ise/tutorias_DSD/FF_estructurados/sim_serie_paralelo_isim_beh.exe" -prj "/home/ise/tutorias_DSD/FF_estructurados/sim_serie_paralelo_beh.prj" "sim_serie_paralelo" 
+-intstyle "ise" -incremental -o "/home/ise/tutorias_DSD/FF_estructurados/sim_paralelo_serie_isim_beh.exe" -prj "/home/ise/tutorias_DSD/FF_estructurados/sim_paralelo_serie_beh.prj" "work.sim_paralelo_serie" 
