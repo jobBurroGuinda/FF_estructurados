@@ -1,5 +1,5 @@
 ISim log file
-Running: /home/ise/tutorias_DSD/FF_estructurados/sim_serie_serie_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/ise/tutorias_DSD/FF_estructurados/sim_serie_serie_isim_beh.wdb 
+Running: /home/ise/tutorias_DSD/FF_estructurados/sim_serie_paralelo_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/ise/tutorias_DSD/FF_estructurados/sim_serie_paralelo_isim_beh.wdb 
 ISim P.20131013 (signature 0xfbc00daa)
 ----------------------------------------------------------------------
 WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.

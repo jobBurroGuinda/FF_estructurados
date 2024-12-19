@@ -1,0 +1,28 @@
+Command line:
+   sim_serie_paralelo_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  50419
+
+Thu Dec 19 04:38:28 2024
+
+
+ Elaboration Time: 0.27 sec
+
+ Current Memory Usage: 198.611 Meg
+
+ Total Signals          : 36
+ Total Nets             : 18
+ Total Signal Drivers   : 14
+ Total Blocks           : 7
+ Total Primitive Blocks : 5
+ Total Processes        : 9
+ Total Traceable Variables  : 10
+ Total Scalar Nets and Variables : 380
+
+ Total Simulation Time: 0.3 sec
+
+ Current Memory Usage: 276.21 Meg
+
+Thu Dec 19 04:39:00 2024
+
