@@ -1,0 +1,3 @@
+vhdl isim_temp "ff_d.vhd"
+vhdl isim_temp "serie_serie.vhd"
+vhdl isim_temp "sim_serie_serie.vhd"

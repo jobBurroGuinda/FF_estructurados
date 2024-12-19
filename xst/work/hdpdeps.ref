@@ -1,0 +1,13 @@
+V3 7
+FL /home/ise/tutorias_DSD/FF_estructurados/ff_d.vhd 2024/12/19.03:55:14 P.20131013
+EN work/ff_d 1734580637 FL /home/ise/tutorias_DSD/FF_estructurados/ff_d.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/ff_d/Behavioral 1734580638 \
+      FL /home/ise/tutorias_DSD/FF_estructurados/ff_d.vhd EN work/ff_d 1734580637
+FL /home/ise/tutorias_DSD/FF_estructurados/serie_serie.vhd 2024/12/19.03:56:59 P.20131013
+EN work/serie_serie 1734580639 \
+      FL /home/ise/tutorias_DSD/FF_estructurados/serie_serie.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/serie_serie/Behavioral 1734580640 \
+      FL /home/ise/tutorias_DSD/FF_estructurados/serie_serie.vhd \
+      EN work/serie_serie 1734580639 CP work/ff_d

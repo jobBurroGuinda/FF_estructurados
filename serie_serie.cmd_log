@@ -1,0 +1,3 @@
+xst -intstyle ise -ifn "/home/ise/tutorias_DSD/FF_estructurados/serie_serie.xst" -ofn "/home/ise/tutorias_DSD/FF_estructurados/serie_serie.syr" 
+xst -intstyle ise -ifn "/home/ise/tutorias_DSD/FF_estructurados/serie_serie.xst" -ofn "/home/ise/tutorias_DSD/FF_estructurados/serie_serie.syr" 
+xst -intstyle ise -ifn "/home/ise/tutorias_DSD/FF_estructurados/serie_serie.xst" -ofn "/home/ise/tutorias_DSD/FF_estructurados/serie_serie.syr" 
