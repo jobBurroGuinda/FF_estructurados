@@ -108,15 +108,16 @@ Slice Utilization Ratio Delta      : 5
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "/home/ise/tutorias_DSD/FF_estructurados/ff_d.vhd" in Library work.
-Architecture behavioral of Entity ff_d is up to date.
+Entity <ff_d> compiled.
+Entity <ff_d> (Architecture <behavioral>) compiled.
 Compiling vhdl file "/home/ise/tutorias_DSD/FF_estructurados/serie_serie.vhd" in Library work.
 Entity <serie_serie> compiled.
-Entity <serie_serie> (Architecture <Behavioral>) compiled.
+Entity <serie_serie> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
-Analyzing hierarchy for entity <serie_serie> in library <work> (architecture <Behavioral>).
+Analyzing hierarchy for entity <serie_serie> in library <work> (architecture <behavioral>).
 
 Analyzing hierarchy for entity <ff_d> in library <work> (architecture <Behavioral>).
 
@@ -124,10 +125,12 @@ Analyzing hierarchy for entity <ff_d> in library <work> (architecture <Behaviora
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
-Analyzing Entity <serie_serie> in library <work> (Architecture <Behavioral>).
+Analyzing Entity <serie_serie> in library <work> (Architecture <behavioral>).
 Entity <serie_serie> analyzed. Unit <serie_serie> generated.
 
 Analyzing Entity <ff_d> in library <work> (Architecture <Behavioral>).
+WARNING:Xst:819 - "/home/ise/tutorias_DSD/FF_estructurados/ff_d.vhd" line 14: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <q0>
 Entity <ff_d> analyzed. Unit <ff_d> generated.
 
 
@@ -139,7 +142,7 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <ff_d>.
     Related source file is "/home/ise/tutorias_DSD/FF_estructurados/ff_d.vhd".
-    Found 1-bit register for signal <Q>.
+    Found 1-bit register for signal <q0>.
     Summary:
 	inferred   1 D-type flip-flop(s).
 Unit <ff_d> synthesized.
@@ -147,7 +150,6 @@ Unit <ff_d> synthesized.
 
 Synthesizing Unit <serie_serie>.
     Related source file is "/home/ise/tutorias_DSD/FF_estructurados/serie_serie.vhd".
-WARNING:Xst:647 - Input <Reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <clk_state>.
     Found 3-bit up counter for signal <count>.
     Found 3-bit comparator less for signal <count$cmp_lt0000> created at line 22.
@@ -202,17 +204,15 @@ Found area constraint ratio of 100 (+ 5) on block serie_serie, actual ratio is 0
 Final Macro Processing ...
 
 Processing Unit <serie_serie> :
-	Found 4-bit shift register for signal <ff_d3/Q>.
+INFO:Xst:741 - HDL ADVISOR - A 4-bit shift register was found for signal <ff_d3/q0> and currently occupies 4 logic cells (2 slices). Removing the set/reset logic would take advantage of SRL16 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
 Unit <serie_serie> processed.
 
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 4
- Flip-Flops                                            : 4
-# Shift Registers                                      : 1
- 4-bit shift register                                  : 1
+# Registers                                            : 8
+ Flip-Flops                                            : 8
 
 =========================================================================
 
@@ -241,22 +241,17 @@ Design Statistics
 # IOs                              : 5
 
 Cell Usage :
-# BELS                             : 7
-#      GND                         : 1
+# BELS                             : 5
 #      INV                         : 2
 #      LUT2                        : 1
 #      LUT3                        : 2
-#      VCC                         : 1
-# FlipFlops/Latches                : 5
-#      FD                          : 1
+# FlipFlops/Latches                : 8
 #      FDE                         : 1
-#      FDR                         : 3
-# Shift Registers                  : 1
-#      SRL16                       : 1
+#      FDR                         : 7
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 3
-#      IBUF                        : 1
+# IO Buffers                       : 4
+#      IBUF                        : 2
 #      OBUF                        : 2
 =========================================================================
 
@@ -265,13 +260,11 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-4 
 
- Number of Slices:                        3  out of   4656     0%  
- Number of Slice Flip Flops:              5  out of   9312     0%  
- Number of 4 input LUTs:                  6  out of   9312     0%  
-    Number used as logic:                 5
-    Number used as Shift registers:       1
+ Number of Slices:                        4  out of   4656     0%  
+ Number of Slice Flip Flops:              8  out of   9312     0%  
+ Number of 4 input LUTs:                  5  out of   9312     0%  
  Number of IOs:                           5
- Number of bonded IOBs:                   4  out of    232     1%  
+ Number of bonded IOBs:                   5  out of    232     2%  
  Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
@@ -296,7 +289,7 @@ Clock Information:
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
 Clk50Mhz                           | BUFGP                  | 4     |
-clk_state                          | NONE(ff_d3/Mshreg_Q)   | 2     |
+clk_state                          | NONE(ff_d3/q0)         | 4     |
 -----------------------------------+------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
@@ -308,9 +301,9 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 4.014ns (Maximum Frequency: 249.128MHz)
-   Minimum input arrival time before clock: 2.059ns
-   Maximum output required time after clock: 4.450ns
+   Minimum period: 3.415ns (Maximum Frequency: 292.826MHz)
+   Minimum input arrival time before clock: 2.716ns
+   Maximum output required time after clock: 4.532ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -341,58 +334,58 @@ Delay:               3.415ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_state'
-  Clock period: 4.014ns (frequency: 249.128MHz)
-  Total number of paths / destination ports: 1 / 1
+  Clock period: 1.319ns (frequency: 758.150MHz)
+  Total number of paths / destination ports: 3 / 3
 -------------------------------------------------------------------------
-Delay:               4.014ns (Levels of Logic = 0)
-  Source:            ff_d3/Mshreg_Q (FF)
-  Destination:       ff_d3/Q (FF)
+Delay:               1.319ns (Levels of Logic = 0)
+  Source:            ff_d2/q0 (FF)
+  Destination:       ff_d3/q0 (FF)
   Source Clock:      clk_state rising
   Destination Clock: clk_state rising
 
-  Data Path: ff_d3/Mshreg_Q to ff_d3/Q
+  Data Path: ff_d2/q0 to ff_d3/q0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     SRL16:CLK->Q          1   3.706   0.000  ff_d3/Mshreg_Q (ff_d3/Mshreg_Q)
-     FD:D                      0.308          ff_d3/Q
+     FDR:C->Q              1   0.591   0.420  ff_d2/q0 (ff_d2/q0)
+     FDR:D                     0.308          ff_d3/q0
     ----------------------------------------
-    Total                      4.014ns (4.014ns logic, 0.000ns route)
-                                       (100.0% logic, 0.0% route)
+    Total                      1.319ns (0.899ns logic, 0.420ns route)
+                                       (68.2% logic, 31.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_state'
-  Total number of paths / destination ports: 1 / 1
+  Total number of paths / destination ports: 5 / 5
 -------------------------------------------------------------------------
-Offset:              2.059ns (Levels of Logic = 1)
-  Source:            D (PAD)
-  Destination:       ff_d3/Mshreg_Q (FF)
+Offset:              2.716ns (Levels of Logic = 1)
+  Source:            Reset (PAD)
+  Destination:       ff_d3/q0 (FF)
   Destination Clock: clk_state rising
 
-  Data Path: D to ff_d3/Mshreg_Q
+  Data Path: Reset to ff_d3/q0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.218   0.420  D_IBUF (D_IBUF)
-     SRL16:D                   0.421          ff_d3/Mshreg_Q
+     IBUF:I->O             4   1.218   0.587  Reset_IBUF (Reset_IBUF)
+     FDR:R                     0.911          ff_d3/q0
     ----------------------------------------
-    Total                      2.059ns (1.639ns logic, 0.420ns route)
-                                       (79.6% logic, 20.4% route)
+    Total                      2.716ns (2.129ns logic, 0.587ns route)
+                                       (78.4% logic, 21.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_state'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Offset:              4.283ns (Levels of Logic = 1)
-  Source:            ff_d3/Q (FF)
+  Source:            ff_d3/q0 (FF)
   Destination:       Q (PAD)
   Source Clock:      clk_state rising
 
-  Data Path: ff_d3/Q to Q
+  Data Path: ff_d3/q0 to Q
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               1   0.591   0.420  ff_d3/Q (ff_d3/Q)
+     FDR:C->Q              1   0.591   0.420  ff_d3/q0 (ff_d3/q0)
      OBUF:I->O                 3.272          Q_OBUF (Q)
     ----------------------------------------
     Total                      4.283ns (3.863ns logic, 0.420ns route)
@@ -402,7 +395,7 @@ Offset:              4.283ns (Levels of Logic = 1)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk50Mhz'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
-Offset:              4.450ns (Levels of Logic = 1)
+Offset:              4.532ns (Levels of Logic = 1)
   Source:            clk_state (FF)
   Destination:       led (PAD)
   Source Clock:      Clk50Mhz rising
@@ -411,24 +404,24 @@ Offset:              4.450ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              4   0.591   0.587  clk_state (clk_state)
+     FDE:C->Q              6   0.591   0.669  clk_state (clk_state)
      OBUF:I->O                 3.272          led_OBUF (led)
     ----------------------------------------
-    Total                      4.450ns (3.863ns logic, 0.587ns route)
-                                       (86.8% logic, 13.2% route)
+    Total                      4.532ns (3.863ns logic, 0.669ns route)
+                                       (85.2% logic, 14.8% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 30.00 secs
-Total CPU time to Xst completion: 3.96 secs
+Total CPU time to Xst completion: 4.00 secs
  
 --> 
 
 
-Total memory usage is 607772 kilobytes
+Total memory usage is 607788 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)
-Number of infos    :    1 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
 

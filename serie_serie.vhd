@@ -30,24 +30,28 @@ begin
 	
 	ff_d0: entity work.ff_d PORT MAP(
 		D => D,
+		Reset => Reset,
 		Q => q0,
 		clk => clk_state
 	);
 	
 	ff_d1: entity work.ff_d PORT MAP(
 		D => q0,
+		Reset => Reset,
 		Q => q1,
 		clk => clk_state
 	);
 	
 	ff_d2: entity work.ff_d PORT MAP(
 		D => q1,
+		Reset => Reset,
 		Q => q2,
 		clk => clk_state
 	);
 	
 	ff_d3: entity work.ff_d PORT MAP(
 		D => q2,
+		Reset => Reset,
 		Q => Q,
 		clk => clk_state
 	);

@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer:
 --
--- Create Date:   03:59:21 12/19/2024
+-- Create Date:   04:25:18 12/19/2024
 -- Design Name:   
 -- Module Name:   /home/ise/tutorias_DSD/FF_estructurados/sim_serie_serie.vhd
 -- Project Name:  FF_estructurados
@@ -87,9 +87,9 @@ BEGIN
    stim_proc: process
    begin		
       -- hold reset state for 100 ns.
-      wait for 100 ns;	
-		D <= '1';
-      wait for 100 ns;	
+      D <= '1';
+		wait for 100 ns;
+		
    end process;
 
 END;

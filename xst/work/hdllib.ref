@@ -1,4 +1,4 @@
-AR serie_serie behavioral /home/ise/tutorias_DSD/FF_estructurados/serie_serie.vhd sub00/vhpl03 1734580640
-EN ff_d NULL /home/ise/tutorias_DSD/FF_estructurados/ff_d.vhd sub00/vhpl00 1734580637
-EN serie_serie NULL /home/ise/tutorias_DSD/FF_estructurados/serie_serie.vhd sub00/vhpl02 1734580639
-AR ff_d behavioral /home/ise/tutorias_DSD/FF_estructurados/ff_d.vhd sub00/vhpl01 1734580638
+AR serie_serie behavioral /home/ise/tutorias_DSD/FF_estructurados/serie_serie.vhd sub00/vhpl03 1734582252
+EN ff_d NULL /home/ise/tutorias_DSD/FF_estructurados/ff_d.vhd sub00/vhpl00 1734582249
+EN serie_serie NULL /home/ise/tutorias_DSD/FF_estructurados/serie_serie.vhd sub00/vhpl02 1734582251
+AR ff_d behavioral /home/ise/tutorias_DSD/FF_estructurados/ff_d.vhd sub00/vhpl01 1734582250
