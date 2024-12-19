@@ -4,5 +4,7 @@ AR paralelo_serie behavioral /home/ise/tutorias_DSD/FF_estructurados/paralelo_se
 EN serie_serie NULL /home/ise/tutorias_DSD/FF_estructurados/serie_serie.vhd sub00/vhpl02 1734582251
 AR ff_d behavioral /home/ise/tutorias_DSD/FF_estructurados/ff_d.vhd sub00/vhpl01 1734582250
 EN serie_paralelo NULL /home/ise/tutorias_DSD/FF_estructurados/serie_paralelo.vhd sub00/vhpl04 1734582922
+AR paralelo_paralelo behavioral /home/ise/tutorias_DSD/FF_estructurados/paralelo_paralelo.vhd sub00/vhpl09 1734585319
+EN paralelo_paralelo NULL /home/ise/tutorias_DSD/FF_estructurados/paralelo_paralelo.vhd sub00/vhpl08 1734585318
 AR serie_paralelo behavioral /home/ise/tutorias_DSD/FF_estructurados/serie_paralelo.vhd sub00/vhpl05 1734582923
 EN paralelo_serie NULL /home/ise/tutorias_DSD/FF_estructurados/paralelo_serie.vhd sub00/vhpl06 1734584550
